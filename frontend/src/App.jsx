@@ -13,18 +13,23 @@ const App = () => {
     <>
 
     <Navbar/>
-    <BrowserRouter>
+ 
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/checkout' element={<Checkout/>}/>
       <Route path='/products' element={<Products/>}/>
     </Routes>
-    </BrowserRouter>
+
     <Footer/>
     <Toaster position='top-center'/>
     </>
   )
 }
-
-export default App
+export default function Root() {
+  return (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+}
