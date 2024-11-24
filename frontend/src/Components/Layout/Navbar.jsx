@@ -8,7 +8,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const Navbar = () => {
     return (
-        <div className=' sticky top-0  shadow-md' style={{zIndex:"1000"}}>
+        <div className=' sticky top-0  shadow-md' style={{zIndex:"4000"}}>
 
             <div className='bg-gray-100 py-6 px-40 flex justify-between items-center ' >
                 <div className="logo">
