@@ -4,9 +4,44 @@
 
 
 
-.hero-banner{
-    background: url('/back.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+
+
+
+/* Default styling for the carousel */
+
+  /* Styling for mobile view */
+  @media (max-width: 768px) {
+    .carousel .slider-wrapper  {
+      height:150px; /* Increased height for mobile view */
+      background-color: aqua;
+    }
+    .carousel-img{
+        height: 150px;
+    }
+    
+  }
+
+
+.search-bar{
+  width: 660px;
+}
+@media (max-width:767px) {
+  .searchbarwidth{
+    width: 290px;
+  }
+  .search-bar{
+    width:290px;
+  }
+  
+  
+}
+
+@media (max-width:375px) {
+  .searchbarwidth{
+    width: 220px;
+  }
+  .search-bar{
+    width:220px;
+  }
+  
 }

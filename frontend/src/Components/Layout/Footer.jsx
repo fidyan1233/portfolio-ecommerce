@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className='pt-20 px-40 bg-gray-100'>
+    <div className='pt-20 px-40 bg-gray-100 hidden lg:block'>
 
 
       <div class="grid grid-cols-4 gap-4">
@@ -79,7 +79,7 @@ const Footer = () => {
       </div>
       <hr className='mt-10' style={{color:"#000"}}/>
       <div className='py-5 text-center bg-gray-100'>
-        <p>Desined by <span className='font-bold text-[#009688]'>Fidyan Pandhre</span></p>
+        <p>Designed by <span className='font-bold text-[#009688]'>Fidyan Pandhre</span></p>
       </div>
     </div>
   )
