@@ -28,12 +28,12 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className='bg-gray-100 pt-4 pb-4 lg:py-6 lg:px-40 px-6    block lg:flex justify-between items-center ' >
+            <div className='bg-gray-100 pt-2 pb-2 lg:py-6 lg:px-40 px-6    block lg:flex justify-between items-center ' >
                 <div className="logo  lg:text-left  lg:mb-0 lg:mb-0 flex justify-between">
                     <div className='flex items-center '>
 
-                        <h1 className='font-bold text-4xl text-[#009688] hidden lg:block'>FS Store</h1>
-                        <h1 className='font-bold text-xl text-[#009688] block lg:hidden'>FS Store</h1>
+                        <h1 className='font-bold text-4xl text-[#009688] hidden lg:block'>FS UPTREND</h1>
+                        <h1 className='font-bold text-xl text-[#009688] block lg:hidden'>FS UPTREND</h1>
                     </div>
                     <div className="flex m-0 p-0 searchbarwidth items-center">
 
@@ -42,7 +42,7 @@ const Navbar = () => {
                             <div className="cart  flex cursor-pointer ">
                                 {/* <Link to="/cart"> <img src="/search.png" width={20} alt="" /> </Link> */}
                                 <div className="search-bar relative ">
-                                    <input type="text" className='p-2 rounded-md m-0 text-xs' style={{ width: "100%" }} placeholder='Search for a Product' />
+                                    <input type="text" className='p-2 rounded-sm m-0 text-xs' style={{ width: "100%" }} placeholder='Search for a Product' />
                                     <img src="/search.png" className='absolute right-2 bottom-2.5' width={15} alt="" />
                                 </div>
                             </div>

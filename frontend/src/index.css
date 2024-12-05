@@ -9,28 +9,16 @@
 
 /* Default styling for the carousel */
 
-  /* Styling for mobile view */
-  @media (max-width: 768px) {
-    .carousel .slider-wrapper  {
-      height:150px; /* Increased height for mobile view */
-      background-color: aqua;
-    }
-    .carousel-img{
-        height: 150px;
-    }
-    
-  }
-
 
 .search-bar{
   width: 660px;
 }
 @media (max-width:767px) {
   .searchbarwidth{
-    width: 290px;
+    width: 220px;
   }
   .search-bar{
-    width:290px;
+    width:220px;
   }
   
   
