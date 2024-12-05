@@ -35,20 +35,14 @@ const Navbar = () => {
                         <h1 className='font-bold text-4xl text-[#009688] hidden lg:block'>FS UPTREND</h1>
                         <h1 className='font-bold text-xl text-[#009688] block lg:hidden'>FS UPTREND</h1>
                     </div>
-                    <div className="flex m-0 p-0 searchbarwidth items-center">
+                    <div className='flex items-center gap-6'>
 
-                        <div className='block   lg:hidden '>
-
-                            <div className="cart  flex cursor-pointer ">
-                                {/* <Link to="/cart"> <img src="/search.png" width={20} alt="" /> </Link> */}
-                                <div className="search-bar relative ">
-                                    <input type="text" className='p-2 rounded-sm m-0 text-xs' style={{ width: "100%" }} placeholder='Search for a Product' />
-                                    <img src="/search.png" className='absolute right-2 bottom-2.5' width={15} alt="" />
-                                </div>
-                            </div>
-
-                        </div>
+                        <Link to={"/cart"}><img src="/search.png" width={18} alt="" /></Link>
+                        <Link to={"/cart"}><img src="/cart.png" width={20} alt="" /></Link>
+                        <Link to={"/cart"}><img src="/like.png" width={20} alt="" /></Link>
+                        <Link to={"/cart"}><img src="/profile.png" width={20} alt="" /></Link>
                     </div>
+                   
                 </div>
                 <div className='hidden lg:block'>
 
