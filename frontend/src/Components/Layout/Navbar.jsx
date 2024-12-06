@@ -4,6 +4,8 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom'
 import { FaPhoneAlt } from "react-icons/fa";
+import { FiSearch } from "react-icons/fi";
+
 import { MdEmail } from "react-icons/md";
 
 
@@ -28,21 +30,62 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className='bg-gray-100 pt-2 pb-2 lg:py-6 lg:px-40 px-6    block lg:flex justify-between items-center ' >
+            <div className='bg-gray-100 pt-2 pb-2 lg:py-2 lg:px-40 px-3    block lg:flex justify-between items-center ' >
                 <div className="logo  lg:text-left  lg:mb-0 lg:mb-0 flex justify-between">
                     <div className='flex items-center '>
 
-                        <h1 className='font-bold text-4xl text-[#009688] hidden lg:block'>FS UPTREND</h1>
-                        <h1 className='font-bold text-xl text-[#009688] block lg:hidden'>FS UPTREND</h1>
-                    </div>
-                    <div className='flex items-center gap-6'>
+                        {/* <h1 className='font-bold text-4xl text-[#009688] hidden lg:block'>FS UPTREND</h1> */}
+                        <div className='hidden lg:block'>
+                            <div className="flex items-center">
+                                <img src="/new-logo.svg" width={60} alt="" />
+                                <div className='h-full flex items-center'>
 
-                        <Link to={"/cart"}><img src="/search.png" width={18} alt="" /></Link>
-                        <Link to={"/cart"}><img src="/cart.png" width={20} alt="" /></Link>
-                        <Link to={"/cart"}><img src="/like.png" width={20} alt="" /></Link>
-                        <Link to={"/cart"}><img src="/profile.png" width={20} alt="" /></Link>
+                                    <div>
+                                        <h1 className='text-4xl text-[#009688] font-style ' style={{ fontWeight: "500" }}>UPTREND</h1>
+                                        <hr />
+                                        <p className='text-sm text-center text-[#009688] font-style' >Top Trending Apparels</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className='block lg:hidden'>
+                            <div className="flex items-center">
+                                <img src="/new-logo.svg" width={39} alt="" />
+                                <div className='h-full flex items-center'>
+
+                                    <div className='mb-1'>
+                                        <h1 className=' text-[#009688] font-style ' style={{ fontWeight: "900", fontSize: "20px" }}>UPTREND</h1>
+                                        <hr />
+                                        <p className='text-center text-[#009688] font-style' style={{ fontSize: "10px" }} >Top Trending Apparels</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        {/* <h1 className='font-bold text-xl text-[#009688] block lg:hidden'>FS UPTREND</h1> */}
                     </div>
-                   
+                    <div className='flex items-center lg:hidden '>
+                        <div className='flex  gap-2 '>
+                            <div className='p-2'>
+                                <Link to={"/cart"}><img src="/search.png" width={22} alt="" /></Link>
+                            </div>
+                            <div className="cart relative p-2">
+                                <Link to={"/cart"}><img src="/cart.png" width={24} alt="" /></Link>
+                                <span className='rounded-full bg-[#009688] absolute top-0 right-0 text-white text-center' style={{ width: "16px", border: "2px solid #fff", fontSize: "8px" }}>1</span>
+                            </div>
+                            <div className="cart relative p-2">
+                                <Link to={"/cart"}><img src="/like.png" width={24} alt="" /></Link>
+                                <span className=' rounded-full bg-[#009688] absolute top-0 right-0 text-white text-center' style={{ width: "16px", border: "2px solid #fff", fontSize: "8px" }}>1</span>
+                            </div>
+                            <div className="p-2">
+                                <Link to={"/cart"}><img src="/profile.png" width={24} alt="" /></Link>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div className='hidden lg:block'>
 

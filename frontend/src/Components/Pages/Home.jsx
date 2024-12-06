@@ -8,15 +8,15 @@ const Home = () => {
     <div className='wrapper' >
       <Carousel autoPlay infiniteLoop={true} showThumbs={false} showIndicators={false} showStatus={false} showArrows={false}>
         <div>
-          <img className='carousel-img'  src="/back.jpg"  />
+          <img className='carousel-img'  src="/bannerx.jpg"  />
 
         </div>
         <div>
-          <img className='carousel-img' src="/back.jpg" />
+          <img className='carousel-img' src="/bannerx.jpg" />
 
         </div>
         <div>
-          <img className='carousel-img' src="/back.jpg " />
+          <img className='carousel-img' src="/bannerx.jpg " />
 
         </div>
       </Carousel>
