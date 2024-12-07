@@ -16,7 +16,7 @@ const Home = () => {
 
         </div>
         <div>
-          <img className='carousel-img' src="/bannerx.jpg " />
+          <img className='carousel-img' src="/banner2.jpg " />
 
         </div>
       </Carousel>
