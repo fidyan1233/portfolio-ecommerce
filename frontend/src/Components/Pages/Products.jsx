@@ -128,7 +128,7 @@ const Products = () => {
         
 
         </Carousel>
-        <h1 className='my-6 lg:my-10 font-bold text-xl lg:text-2xl text-center '>FEATURED PRODUCTS</h1>
+        <h1 className='my-6 lg:my-10 font-bold text-xl lg:text-2xl text-center '>T-SHIRTS</h1>
         <Carousel responsive={responsive} keyBoardControl={true}>
 
           <div className="card mx-3 shadow-lg ">
@@ -230,7 +230,7 @@ const Products = () => {
         
 
         </Carousel>
-        <h1 className='my-6 lg:my-10 font-bold text-xl lg:text-2xl text-center '>FEATURED PRODUCTS</h1>
+        <h1 className='my-6 lg:my-10 font-bold text-xl lg:text-2xl text-center '>SHIRTS</h1>
         <Carousel responsive={responsive} keyBoardControl={true}>
 
           <div className="card mx-3 shadow-lg ">

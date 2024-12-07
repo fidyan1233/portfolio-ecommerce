@@ -13,29 +13,40 @@
 /* Default styling for the carousel */
 
 
-.search-bar{
+.search-bar {
   width: 660px;
 }
+
 @media (max-width:767px) {
-  .searchbarwidth{
+  .searchbarwidth {
     width: 220px;
   }
-  .search-bar{
-    width:220px;
+
+  .search-bar {
+    width: 220px;
   }
-  
-  
+
+
 }
 
 @media (max-width:375px) {
-  .searchbarwidth{
+  .searchbarwidth {
     width: 220px;
   }
-  .search-bar{
-    width:220px;
+
+  .search-bar {
+    width: 220px;
   }
-  
+
 }
-.font-style{
+
+.font-style {
   font-family: my-font;
+}
+
+
+@media (max-width:575px) {
+  .mobile-footer {
+    width: 20vh !important;
+  }
 }
