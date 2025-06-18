@@ -12,7 +12,6 @@ const Footer = () => {
             <div className="flex  items-center">
               <img src="/new-logo.svg" width={60} alt="" />
               <div className='h-full flex items-center'>
-
                 <div>
                   <h1 className='text-4xl text-[#009688] font-style ' style={{ fontWeight: "500" }}>UPTREND</h1>
                   <hr />
@@ -22,7 +21,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <p className='mt-4  pe-3 text-sm text-wrap'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At facilis, nihil nemo distinctio dolor laborum atque beatae. Architecto quos similique illo facilis, maiores voluptatum esse placeat labore voluptatibus dolorem voluptas.</p>
+          <p className='mt-4  pe-3 text-sm text-wrap lg:hidden'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At facilis, nihil nemo distinctio dolor laborum atque beatae. Architecto quos similique illo facilis, maiores voluptatum esse placeat labore voluptatibus dolorem voluptas.</p>
           <p className='hidden lg:block mt-4  pe-3'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At facilis, nihil nemo distinctio dolor laborum atque beatae. Architecto quos similique illo facilis, maiores voluptatum esse placeat labore voluptatibus dolorem voluptas.</p>
 
         </div>
@@ -67,7 +66,7 @@ const Footer = () => {
         <div className='hidden lg:flex lg:justify-center'>
           <div>
             <div className="logo">
-              <h1 className='font-bold text-2xl text-[#009688]'>Quick Links</h1>
+              <h1 className='font-bold text-xl text-[#009688] lg:hidden'>Quick Links</h1>
               <h1 className='font-bold text-2xl text-[#009688]'>Quick Links</h1>
             </div>
             <ul className="mt-5 gap-10">
@@ -86,9 +85,18 @@ const Footer = () => {
           <div>
 
             <div className="logo">
+            <h1 className='font-bold text-xl text-[#009688] lg:hidden'>Categories</h1>
               <h1 className='font-bold text-2xl text-[#009688]'>Categories</h1>
             </div>
             <ul className="mt-5">
+              <Link to="/about"><li className='mb-3 cursor-pointer'>T-shirts</li></Link>
+              <Link to="/contact"><li className='mb-3 cursor-pointer'>Shirts</li></Link>
+              <Link to="/privacy-policy"><li className='mb-3 cursor-pointer'>Hodies</li></Link>
+              <Link to="/terms-conditions"><li className='mb-3 cursor-pointer'>Jeans</li></Link>
+              <Link to="/refund-policy"><li className='mb-3 cursor-pointer'>Sweater</li></Link>
+              <Link to="/my-account"><li className='mb-3 cursor-pointer'>Raincoat</li></Link>
+            </ul>
+            <ul className="mt-5 text-sm lg:hidden">
               <Link to="/about"><li className='mb-3 cursor-pointer'>T-shirts</li></Link>
               <Link to="/contact"><li className='mb-3 cursor-pointer'>Shirts</li></Link>
               <Link to="/privacy-policy"><li className='mb-3 cursor-pointer'>Hodies</li></Link>
@@ -103,11 +111,11 @@ const Footer = () => {
           <div>
 
             <div className="logo">
-              <h1 className='font-bold text-xl text-[#009688]'>Contact</h1>
+              <h1 className='font-bold text-xl text-[#009688] lg:hidden'>Contact</h1>
               <h1 className='font-bold text-2xl text-[#009688] hidden lg:block'>Contact</h1>
             </div>
-            <div className='mt-4'>
-              <div className=' rounded-md' >
+            <div className='mt-4 lg:hidden'>
+              <div className='rounded-md' >
                 <div className="grid grid-cols-[20%_75%] ">
                   <div >
                     <p className='font-bold text-[#009688] mb-5 text-sm'>Phone :</p>
