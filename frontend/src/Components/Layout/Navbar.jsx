@@ -85,7 +85,7 @@ const Navbar = () => {
                             >
                                 <div className="fixed top-0 left-0 w-full h-full bg-white shadow-lg z-50 md:hidden">
                                     <div className="flex justify-between items-center px-4 py-3 border-b">
-                                        <img src="/sellkaroo-logo.png" width={130} alt="" />
+                                        <img src="/sellkaroo-logo.png" width={180} alt="" />
                                         <button onClick={() => setIsOpen(false)}>
                                             <XMarkIcon className="w-6 h-6 text-[#479789]" strokeWidth={2.8} />
                                         </button>
