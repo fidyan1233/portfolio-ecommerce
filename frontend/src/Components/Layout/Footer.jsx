@@ -3,22 +3,14 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className='pt-20 px-6 lg:px-40 bg-gray-100  '>
+    <div className='pt-10 px-6 lg:px-40 bg-gray-100  '>
 
 
       <div class="grid  grid-flex-4 lg:grid-cols-4 gap-4">
         <div>
           <div className="logo">
             <div className="flex  items-center">
-              <img src="/new-logo.svg" width={60} alt="" />
-              <div className='h-full flex items-center'>
-                <div>
-                  <h1 className='text-4xl text-[#009688] font-style ' style={{ fontWeight: "500" }}>UPTREND</h1>
-                  <hr />
-                  <p className='text-sm text-center text-[#009688] font-style' >Top Trending Apparels</p>
-
-                </div>
-              </div>
+              <img src="/sellkaroo-logo.png" alt="" />
             </div>
           </div>
           <p className='mt-4  pe-3 text-sm text-wrap lg:hidden'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At facilis, nihil nemo distinctio dolor laborum atque beatae. Architecto quos similique illo facilis, maiores voluptatum esse placeat labore voluptatibus dolorem voluptas.</p>
