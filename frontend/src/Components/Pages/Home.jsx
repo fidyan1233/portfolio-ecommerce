@@ -6,9 +6,9 @@ import { Carousel } from 'react-responsive-carousel';
 const Home = () => {
   return (
     <div className='wrapper'>
-      <Carousel autoPlay infiniteLoop={true} showThumbs={false} showIndicators={false} showStatus={false} showArrows={false} interval={6000}>
+      <Carousel className='lg:px-40 lg:py-8 p-5' autoPlay infiniteLoop={true} showThumbs={false} showIndicators={false} showStatus={false} showArrows={false} interval={2000}>
         <div>
-          <img className='carousel-img'  src="/banner2.jpg"  />
+          <img className='carousel-img' src="/banner2.jpg"  />
 
         </div>
         <div>
