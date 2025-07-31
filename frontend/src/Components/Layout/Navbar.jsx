@@ -1,9 +1,11 @@
 import React from 'react'
 
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaPhoneAlt } from "react-icons/fa";
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { FiSearch } from "react-icons/fi";
 
 import { MdEmail } from "react-icons/md";
@@ -12,6 +14,7 @@ import { MdEmail } from "react-icons/md";
 
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false)
     return (
         <div className=' sticky top-0  shadow-md' style={{ zIndex: "4000" }}>
             <div className="top-nav-bar flex justify-between items-center px-6 py-2 lg:px-40 bg-[#009688] text-white ">
@@ -43,7 +46,7 @@ const Navbar = () => {
                         </div>
                         <div className='block lg:hidden'>
                             <div className="flex items-center">
-                                 <img src="/sellkaroo-logo.png" width={160} alt="" />
+                                <img src="/sellkaroo-logo.png" width={160} alt="" />
                             </div>
 
                         </div>
@@ -62,9 +65,72 @@ const Navbar = () => {
                                 <Link to={"/cart"}><img src="/like.png" width={24} alt="" /></Link>
                                 <span className=' rounded-full bg-[#009688] absolute top-0 right-0 text-white text-center' style={{ width: "16px", border: "2px solid #fff", fontSize: "8px" }}>1</span>
                             </div>
-                            <div className="p-2">
+                            {/* <div className="p-2">
                                 <Link to={"/cart"}><img src="/profile.png" width={24} alt="" /></Link>
-                            </div>
+                            </div> */}
+                            <button
+                                onClick={() => setIsOpen(!isOpen)}
+                                className="p-2 text-gray-700 focus:outline-none md:hidden"
+                            >
+                                {isOpen ? <XMarkIcon className="w-6 text-[#479789]" strokeWidth={2.8} /> : <Bars3Icon className="w-6 text-[#479789]" strokeWidth={2.8} />}
+                            </button>
+                            <Transition
+                                show={isOpen}
+                                enter="transition-transform duration-200"
+                                enterFrom="-translate-x-full"
+                                enterTo="translate-x-0"
+                                leave="transition-transform duration-200"
+                                leaveFrom="translate-x-0"
+                                leaveTo="-translate-x-full"
+                            >
+                                <div className="fixed top-0 left-0 w-full h-full bg-white shadow-lg z-50 md:hidden">
+                                    <div className="flex justify-between items-center px-4 py-3 border-b">
+                                        <img src="/sellkaroo-logo.png" width={130} alt="" />
+                                        <button onClick={() => setIsOpen(false)}>
+                                            <XMarkIcon className="w-6 h-6 text-[#479789]" strokeWidth={2.8} />
+                                        </button>
+                                    </div>
+
+                                    <Menu as="div" className="mt-4">
+                                        <MenuItems static className="flex flex-col gap-2 px-4">
+                                            <MenuItem>
+                                                {({ active }) => (
+                                                    <a
+                                                        href="/cart"
+                                                        className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
+                                                            }`}
+                                                    >
+                                                        Home
+                                                    </a>
+                                                )}
+                                            </MenuItem>
+                                            <MenuItem>
+                                                {({ active }) => (
+                                                    <a
+                                                        href="/cart"
+                                                        className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
+                                                            }`}
+                                                    >
+                                                        About
+                                                    </a>
+                                                )}
+                                            </MenuItem>
+                                            <MenuItem>
+                                                {({ active }) => (
+                                                    <a
+                                                        href="/cart"
+                                                        className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
+                                                            }`}
+                                                    >
+                                                        Contact
+                                                    </a>
+                                                )}
+                                            </MenuItem>
+                                        </MenuItems>
+                                    </Menu>
+                                </div>
+                            </Transition>
+
                         </div>
                     </div>
 
