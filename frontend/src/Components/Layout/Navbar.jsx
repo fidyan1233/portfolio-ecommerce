@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react'
+import { Menu, MenuButton, MenuItem, MenuItems, Transition, Popover } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { FaPhoneAlt } from "react-icons/fa";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -126,6 +126,17 @@ const Navbar = () => {
                                                     </a>
                                                 )}
                                             </MenuItem>
+                                            <MenuItem>
+                                                {({ active }) => (
+                                                    <a
+                                                        href="/subscription"
+                                                        className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
+                                                            }`}
+                                                    >
+                                                     Create Store
+                                                    </a>
+                                                )}
+                                            </MenuItem>
                                         </MenuItems>
                                     </Menu>
                                 </div>
@@ -157,8 +168,8 @@ const Navbar = () => {
 
 
                             <div className="number" style={{ lineHeight: "20px" }}>
-                                <p className='text-right text-sm '>For Support ?</p>
-                                <p className='text-m font-bold text-[#009688]'>+91 8108290681</p>
+                                <p className='text-right text-sm '>Want to Sell ?</p>
+                                <p className='text-m font-bold text-[#009688]'><a href="/subscription">Create Your Store Now</a></p>
                             </div>
 
 
@@ -237,56 +248,60 @@ const Navbar = () => {
 
                 <div className="menu-nav flex items-center justify-center  py-5 bg-white" style={{ height: "30px" }}>
                     <ul className='flex gap-20'>
-                        <li>
-                            <Menu as="div" className="relative inline-block text-left">
-                                <div>
-                                    <MenuButton className="inline-flex w-full justify-center  rounded-md   items-center  text-gray-900  ">
-                                        T-shirts
-                                        <ChevronDownIcon aria-hidden="true" className="size-5 ms-1 text-gray-600" />
-                                    </MenuButton>
-                                </div>
+                        <li className="group relative">
+                            <Popover className="relative">
+                                {({ open }) => (
+                                    <>
+                                        <Popover.Button className="inline-flex items-center gap-1 text-gray-800 hover:text-[#479789] focus:outline-none">
+                                            Available Stores Category wise
+                                            <ChevronDownIcon className="w-4 h-4" />
+                                        </Popover.Button>
 
-                                <MenuItems
-                                    transition
-                                    className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-                                >
-                                    <div className="py-1">
-                                        <MenuItem>
-                                            <a
-                                                href="#"
-                                                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
-                                            >
-                                                Half Sleves
-                                            </a>
-                                        </MenuItem>
-                                        <MenuItem>
-                                            <a
-                                                href="#"
-                                                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
-                                            >
-                                                Full Sleves
-                                            </a>
-                                        </MenuItem>
-                                        <MenuItem>
-                                            <a
-                                                href="#"
-                                                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
-                                            >
-                                                Lycra
-                                            </a>
-                                        </MenuItem>
-                                        <MenuItem>
-                                            <a
-                                                href="#"
-                                                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
-                                            >
-                                                Cotton
-                                            </a>
-                                        </MenuItem>
-
-                                    </div>
-                                </MenuItems>
-                            </Menu>
+                                        <Transition
+                                            as={Fragment}
+                                            enter="transition ease-out duration-200"
+                                            enterFrom="opacity-0 translate-y-1"
+                                            enterTo="opacity-100 translate-y-0"
+                                            leave="transition ease-in duration-150"
+                                            leaveFrom="opacity-100 translate-y-0"
+                                            leaveTo="opacity-0 translate-y-1"
+                                        >
+                                            <Popover.Panel className="absolute left-0 mt-3 w-[700px] bg-white shadow-lg ring-1 ring-gray-200 rounded-lg p-6 z-10">
+                                                <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                                                    <div>
+                                                        <h3 className="text-l font-semibold text-[#479789] uppercase">Ladies Dresses</h3>
+                                                        <ul className="mt-2 space-y-2">
+                                                            <li><a href="#" className="block text-gray-700 hover:text-[#479789]">Cotton House</a></li>
+                                                            <li><a href="#" className="block text-gray-700 hover:text-[#479789]">Saniya Ladies dresses</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <h3 className="text-l font-semibold text-[#479789] uppercase">T-shirts</h3>
+                                                        <ul className="mt-2 space-y-2">
+                                                            <li><a href="#" className="block text-gray-700 hover:text-[#479789]">Skipper</a></li>
+                                                            <li><a href="#" className="block text-gray-700 hover:text-[#479789]">Fuel</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <h3 className="text-l font-semibold text-[#479789] uppercase">Jeans</h3>
+                                                        <ul className="mt-2 space-y-2">
+                                                            <li><a href="#" className="block text-gray-700 hover:text-[#479789]">Guys Fashion</a></li>
+                                                            <li><a href="#" className="block text-gray-700 hover:text-[#479789]">Friends Collection</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <h3 className="text-l font-semibold text-[#479789] uppercase">Shirts</h3>
+                                                        <ul className="mt-2 space-y-2">
+                                                            <li><a href="#" className="block text-gray-700 hover:text-[#479789]">Guys Fashion</a></li>
+                                                            <li><a href="#" className="block text-gray-700 hover:text-[#479789]">Friends Collection</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </Popover.Panel>
+                                        </Transition>
+                                    </>
+                                )}
+                            </Popover>
                         </li>
                         <li>Shirts</li>
                         <li>Hodies</li>

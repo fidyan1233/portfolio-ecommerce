@@ -7,6 +7,7 @@ import Products from './Components/Pages/Products'
 import Navbar from './Components/Layout/Navbar'
 import Footer from './Components/Layout/Footer'
 import { Toaster } from 'react-hot-toast'
+import Subscription from './Components/Pages/Subscription'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/checkout' element={<Checkout/>}/>
       <Route path='/products' element={<Products/>}/>
+      <Route path='/subscription' element={<Subscription/>}/>
     </Routes>
 
     <Footer/>
