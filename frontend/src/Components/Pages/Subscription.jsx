@@ -40,8 +40,8 @@ const Subscription = () => {
 
 
     return (
-        <div className="bg-gray-50 lg:py-20 py-6 px-10 flex flex-col items-center">
-            <h1 className="text-2xl font-bold text-[#479789] mb-8">Choose Your Plan</h1>
+        <div className="bg-gray-50 lg:py-20 pt-4 pb-20 px-10 flex flex-col items-center">
+            <h1 className="text-2xl font-bold text-[#479789] mb-4">Choose Your Plan</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
                 {plans.map((plan, index) => (
                     <div

@@ -5,7 +5,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { useState, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { FaPhoneAlt } from "react-icons/fa";
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon, BuildingStorefrontIcon} from '@heroicons/react/24/outline'
 import { FiSearch } from "react-icons/fi";
 
 import { MdEmail } from "react-icons/md";
@@ -46,7 +46,7 @@ const Navbar = () => {
                         </div>
                         <div className='block lg:hidden'>
                             <div className="flex items-center">
-                                <img src="/sellkaroo-logo.png" width={160} alt="" />
+                                <Link to={"/"}><img src="/sellkaroo-logo.png" width={160} alt="" /></Link>
                             </div>
 
                         </div>
@@ -55,14 +55,14 @@ const Navbar = () => {
                     <div className='flex items-center lg:hidden '>
                         <div className='flex  gap-2 '>
                             <div className='p-2'>
-                                <Link to={"/cart"}><img src="/search.png" width={22} alt="" /></Link>
+                                <Link to={"/search"}><img src="/search.png" width={22} alt="" /></Link>
                             </div>
                             <div className="cart relative p-2">
                                 <Link to={"/cart"}><img src="/cart.png" width={24} alt="" /></Link>
                                 <span className='rounded-full bg-[#009688] absolute top-0 right-0 text-white text-center' style={{ width: "16px", border: "2px solid #fff", fontSize: "8px" }}>1</span>
                             </div>
                             <div className="cart relative p-2">
-                                <Link to={"/cart"}><img src="/like.png" width={24} alt="" /></Link>
+                                <Link to={"/wishlist"}><img src="/like.png" width={24} alt="" /></Link>
                                 <span className=' rounded-full bg-[#009688] absolute top-0 right-0 text-white text-center' style={{ width: "16px", border: "2px solid #fff", fontSize: "8px" }}>1</span>
                             </div>
                             {/* <div className="p-2">
@@ -96,9 +96,9 @@ const Navbar = () => {
                                             <MenuItem>
                                                 {({ active }) => (
                                                     <Link
-                                                        to={"/cart"}
+                                                        to={"/"}
                                                         onClick={() => setIsOpen(false)}
-                                                        className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
+                                                        className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : ' text-[#479789]'
                                                             }`}
                                                     >
                                                         Home
@@ -108,9 +108,9 @@ const Navbar = () => {
                                             <MenuItem>
                                                 {({ active }) => (
                                                     <Link
-                                                        to={"/cart"}
+                                                        to={"/about"}
                                                         onClick={() => setIsOpen(false)}
-                                                        className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
+                                                        className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : ' text-[#479789]'
                                                             }`}
                                                     >
                                                         About
@@ -120,9 +120,9 @@ const Navbar = () => {
                                             <MenuItem>
                                                 {({ active }) => (
                                                     <Link
-                                                        to={"/cart"}
+                                                        to={"/contact"}
                                                         onClick={() => setIsOpen(false)}
-                                                        className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
+                                                        className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : ' text-[#479789]'
                                                             }`}
                                                     >
                                                         Contact
@@ -132,12 +132,25 @@ const Navbar = () => {
                                             <MenuItem>
                                                 {({ active }) => (
                                                     <Link
-                                                        to={"/subscription"}
+                                                        to={"/my-profile"}
                                                         onClick={() => setIsOpen(false)}
-                                                        className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
+                                                        className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : ' text-[#479789]'
                                                             }`}
                                                     >
-                                                     Create Store
+                                                        My Profile
+                                                    </Link>
+                                                )}
+                                            </MenuItem>
+                                            <hr />
+                                            <h4 className='px-4 pt-2 font-bold'>WANT TO SELL ?</h4>
+                                            <MenuItem>
+                                                {({ active }) => (
+                                                    <Link
+                                                        to={"/subscription"}
+                                                        onClick={() => setIsOpen(false)}
+                                                        className='bg-[#479789] px-4 font-bold text-xl text-[#fff] w-60 flex items-center rounded py-1 '
+                                                    >
+                                                    Create Store Now <BuildingStorefrontIcon className="mx-2 inline w-6 h-6 text-[#fff]" />
                                                     </Link>
                                                 )}
                                             </MenuItem>
@@ -189,7 +202,7 @@ const Navbar = () => {
 
                             <div className="like flex items-center cursor-pointer">
 
-                                <img src="/like.png" width={35} alt="" /> <span className='text-sm  ms-1'>10</span>
+                                <Link className='flex items-center' to={"/wishlist"}><img src="/like.png" width={35} alt="" /> <span className='text-sm  ms-1'>10</span></Link>
                             </div>
 
                             <Menu as="div" className="relative inline-block text-left">

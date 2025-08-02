@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom'
 const initialCart = [
   {
     id: 1,
@@ -59,10 +59,10 @@ const Cart = () => {
   );
 
   return (
-    <div className="max-w-6xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-6 py-20">
+    <div className="max-w-6xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-6 lg:py-20 pb-20">
       {/* Left: Cart Items */}
       <div className="md:col-span-2">
-        <h2 className="text-2xl font-bold mb-4 text-[#479789]">Your Cart</h2>
+        <h2 className="text-2xl font-bold mb-4 text-[#479789] text-center">Your Cart</h2>
 
         {cartItems.length === 0 ? (
           <p className="text-gray-600">Your cart is empty.</p>
@@ -132,7 +132,7 @@ const Cart = () => {
           <span>₹{totalAmount.toLocaleString()}</span>
         </div>
         <button className="w-full bg-[#479789] text-white py-2 rounded-xl hover:bg-[#3d8377] transition duration-300 mb-2">
-          Checkout
+         <Link to={"/checkout"}>Checkout</Link>
         </button>
         <button
           className="w-full bg-red-500 text-white py-2 rounded-xl hover:bg-red-600 transition duration-300"
