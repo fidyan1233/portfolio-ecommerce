@@ -27,9 +27,9 @@ const WishList = () => {
       <div className="max-w-6xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-6 lg:py-20 pb-20">
       {/* Left: Cart Items */}
       <div className="md:col-span-2">
-        <h2 className="text-2xl font-bold mb-4 text-[#479789] text-center">Your Cart</h2>
+        <h2 className="text-2xl font-bold mb-4 text-[#479789] text-center">Whish List</h2>
           {bucket.length === 0 ? (
-            <p className="text-gray-500">Bucket is empty.</p>
+            <p className="text-gray-500">Whish List is empty.</p>
           ) : (
             bucket.map(item => (
               <div
