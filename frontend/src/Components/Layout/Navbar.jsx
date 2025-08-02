@@ -97,6 +97,7 @@ const Navbar = () => {
                                                 {({ active }) => (
                                                     <Link
                                                         to={"/cart"}
+                                                        onClick={() => setIsOpen(false)}
                                                         className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
                                                             }`}
                                                     >
@@ -108,6 +109,7 @@ const Navbar = () => {
                                                 {({ active }) => (
                                                     <Link
                                                         to={"/cart"}
+                                                        onClick={() => setIsOpen(false)}
                                                         className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
                                                             }`}
                                                     >
@@ -119,6 +121,7 @@ const Navbar = () => {
                                                 {({ active }) => (
                                                     <Link
                                                         to={"/cart"}
+                                                        onClick={() => setIsOpen(false)}
                                                         className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
                                                             }`}
                                                     >
@@ -130,6 +133,7 @@ const Navbar = () => {
                                                 {({ active }) => (
                                                     <Link
                                                         to={"/subscription"}
+                                                        onClick={() => setIsOpen(false)}
                                                         className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
                                                             }`}
                                                     >
