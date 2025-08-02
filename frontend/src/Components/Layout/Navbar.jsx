@@ -95,46 +95,46 @@ const Navbar = () => {
                                         <MenuItems static className="flex flex-col gap-2 px-4">
                                             <MenuItem>
                                                 {({ active }) => (
-                                                    <a
-                                                        href="/cart"
+                                                    <Link
+                                                        to={"/cart"}
                                                         className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
                                                             }`}
                                                     >
                                                         Home
-                                                    </a>
+                                                    </Link>
                                                 )}
                                             </MenuItem>
                                             <MenuItem>
                                                 {({ active }) => (
-                                                    <a
-                                                        href="/cart"
+                                                    <Link
+                                                        to={"/cart"}
                                                         className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
                                                             }`}
                                                     >
                                                         About
-                                                    </a>
+                                                    </Link>
                                                 )}
                                             </MenuItem>
                                             <MenuItem>
                                                 {({ active }) => (
-                                                    <a
-                                                        href="/cart"
+                                                    <Link
+                                                        to={"/cart"}
                                                         className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
                                                             }`}
                                                     >
                                                         Contact
-                                                    </a>
+                                                    </Link>
                                                 )}
                                             </MenuItem>
                                             <MenuItem>
                                                 {({ active }) => (
-                                                    <a
-                                                        href="/subscription"
+                                                    <Link
+                                                        to={"/subscription"}
                                                         className={`block px-4 py-2 rounded ${active ? 'bg-blue-100 text-blue-700' : 'text-gray-800'
                                                             }`}
                                                     >
                                                      Create Store
-                                                    </a>
+                                                    </Link>
                                                 )}
                                             </MenuItem>
                                         </MenuItems>
