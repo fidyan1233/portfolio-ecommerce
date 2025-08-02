@@ -186,7 +186,7 @@ const Navbar = () => {
 
                             <div className="number" style={{ lineHeight: "20px" }}>
                                 <p className='text-right text-sm '>Want to Sell ?</p>
-                                <p className='text-m font-bold text-[#009688]'><a href="/subscription">Create Your Store Now</a></p>
+                                <p className='text-m font-bold text-[#009688]'><Link to={"/subscription"}>Create Your Store Now</Link></p>
                             </div>
 
 
